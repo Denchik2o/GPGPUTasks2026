@@ -31,12 +31,6 @@ void run(int argc, char** argv)
     //          кроме того есть debugPrintfEXT(...) для вывода в консоль с видеокарты
     //          кроме того используемая библиотека поддерживает rassert-проверки (своеобразные инварианты с уникальным числом) на видеокарте для Vulkan
 
-    ocl::KernelSource ocl_aplusb_matrix_bad(ocl::getAplusBMatrixBad());
-    ocl::KernelSource ocl_aplusb_matrix_good(ocl::getAplusBMatrixGood());
-
-    avk2::KernelSource vk_aplusb_matrix_bad(avk2::getAplusBMatrixBad());
-    avk2::KernelSource vk_aplusb_matrix_good(avk2::getAplusBMatrixGood());
-
     unsigned int task_size = 64;
     unsigned int width = task_size * 256;
     unsigned int height = task_size * 128;
